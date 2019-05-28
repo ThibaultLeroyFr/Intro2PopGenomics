@@ -6,7 +6,7 @@ This github directory host the scripts used to perform the analyses shown in in 
 Please send emails to thibault.leroy@umontpellier.fr and quentinrougemont@orange.fr for questions about the scripts or for full-text requests.
 
 ### Important note
-Our scripts are not standalone executables. Quite the contrary, these scripts (deliberately) require some simple edits to adjust to your data. Editing script is probably the best way to learn how a script works (& to learn how to code). So please take some time to read the scripts, and if needed, to look at the manual of the related software. Change the paths to files and programs to adjust the scripts to your computer architecture. 
+Our scripts are not standalone executables. Quite the contrary, these scripts (deliberately) require some simple edits to adjust to your data. Editing script is probably the best way to learn how a script works, to avoid major mistakes & start learning how to code. So please take some time to read the scripts and to briefly look at the manual of the related software. Change the paths to files and programs to adjust the scripts to your computer architecture. Do not hesitate to send emails in case of major computational issues. 
 
 
 ### Table of contents:<br/>
