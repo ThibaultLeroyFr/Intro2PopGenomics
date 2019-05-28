@@ -1,0 +1,4 @@
+python chooseK.py --input=merged_joint_bwa_mem_mdup_raw.filtered.vcf.PASS.withoutNA.3pc.withheader.K
+Model complexity that maximizes marginal likelihood = 2
+Model components used to explain structure in data = 2
+
