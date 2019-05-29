@@ -94,8 +94,4 @@ Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/
 <strong>Generate a circlize plot (./3.2.4/Rscript_plot_Circlize/) </strong>
 R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
 <em>Details shown in script_circlize_GC_pi_ROD_Africanrice.R (Import & convert the vcf file, compute PCA & generate plots) </em>
-(the input file was made available : ./3.2.4/Results_pi/Genomic_pi_ROD_010419.withoutNA.txt)
-<img src="https://github.com/ThibaultLeroyFr/Intro2PopGenomics/tree/master/3.2.4/Rscript_plot_Circlize/Fig_pi_ROD_D.png"
-     alt="Circlize pi"
-     style="float: left; margin-right: 10px;" />
-</pre></code>
+(the file containing the pi values was made available at ./3.2.4/Results_pi/Genomic_pi_ROD_010419.withoutNA.txt)
