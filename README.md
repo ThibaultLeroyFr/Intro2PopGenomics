@@ -99,5 +99,5 @@ Scripts were developed by Leroy et al. 2019 bioRxiv 505610, ver. 4 peer-reviewed
 <strong>Compute theta, pi & Tajima's D (./3.2.4/Scripts_generate_fasta_sequences_from_vcf/)</strong>
 Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/7484705">seq_stat</a>
 <em>bash script_compute_pi_slidwin.sh [referencegenome].scafflength [VCF] [ouputdir] [size_of_sliding_window] [output_prefix]</em>
-(scafflength = length_of_scaffolds as computed by :  
+(scafflength = file containing the length of each scaffold as computed by ./3.2.2/5-Joint_genotyping/script_scaff_length.py):  
 </pre></code>
