@@ -101,14 +101,14 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
 <pre><code>
 <strong>Convert the vcf to the smc++ input format (./3.2.5/1_vcf2smcpp.sh)</strong>
-<em>smc++ vcf2smc --cores [nb_cpu] [input_file] [output_file] [chr] [pop1:Ind1,Ind2,Ind3..]</em>
+<em>smc++ vcf2smc --cores [nb_cpu] [input_vcf_file] [output_smc_data_files] [chr] [pop1:Ind1,Ind2,Ind3..]</em>
 <strong>Perform the inference (./3.2.5/2_analysis_smc.sh)</strong>
-
+<em>smc++ cv --cores [nb_cpu] --out [out] --Nmax [Ne_max] --knots [spline_knots_for_smoothing] [mutation_rate] [smc_data_files]</em>
 <strong>Generate a plot (./3.2.5/3_smcpp_plot.sh)</strong>
-
+<em>smc++ plot [outfile.pdf] -g 1 -c [infile_model.final.json]
+(-c produces a CSV-formatted table: this file is also available ./3.2.5/Rscript_plot/plot_generation.csv)</em>
 <em>(to generate a R plot using the R package <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R)</em>
 </pre></code>
-
 
 
 *3.2.6 - Deleterious mutation load*<br/>
