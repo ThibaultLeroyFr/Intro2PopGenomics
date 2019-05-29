@@ -33,10 +33,10 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 ### Individual data:<br/>
 *3.2.2 : From raw data to VCF*<br/>
 
-<pre>
-**Import sequencing data (./1-Import_RawData)**
+<pre><code>
+<b>Import sequencing data (./1-Import_RawData)<\b>
 Softwares needed: wget (ftp-transfert)
-<\pre>
+<\pre><c\ode>
 
 ```
 **Read trimming (./2-Trimming)**
