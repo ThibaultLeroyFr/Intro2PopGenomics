@@ -76,13 +76,13 @@ bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Numbe
 *3.2.3 - Population structure*</br>
 <pre><code>
 <strong>Perform Principal Component Analysis (./3.2.3/PCA/)</strong>
-R packages needed: SNPRelate (& gdsfmt)
+R packages needed: <a href="https://bioconductor.org/packages/release/bioc/html/SNPRelate.html/">SNPRelate</a> (& <a href="https://bioconductor.org/packages/release/bioc/html/gdsfmt.html/">gdsfmt</a>)
 <em> Details shown in script_PCA_from_vcf.R (Import & convert the vcf file, compute PCA & generate plots) </em>
 </pre></code>
 
 <pre><code>
 <strong>Infer ancestry proportions (./3.2.3/fastStructure/)</strong>
-Software needed: Plink & <a href="https://rajanil.github.io/fastStructure/">fastStructure</a>
+Software needed: <a href="https://www.cog-genomics.org/plink2/">Plink</a> & <a href="https://rajanil.github.io/fastStructure/">fastStructure</a>
 Generate an input file using Plink:
 <em> ./plink --allow-extra-chr -allow-extra-chr --make-bed --noweb --out [VCF].bed --vcf [VCF] </em>
 FastStructure inferences:
