@@ -119,10 +119,10 @@ It is also possible to use the newly generated .csv file to generate the plot un
 <em>Download the raw data for the outgroup species -> generate joint VCF / outgroup species
 Same steps than in the section "3.2.2 : From raw data to VCF"</em>
     
-2/Detect the ancestral state & compute allele frequencies(./3.2.6/Scripts_derived_alleles/script_vcfoutgroup_to_ancestral_derived.sh) 
+2/Detect the ancestral state & compute allele frequencies (./3.2.6/Scripts_derived_alleles/script_vcfoutgroup_to_ancestral_derived.sh) 
 
 In a nutshell:
-Parse the 3 joint vcf (focal species & 2 outgroup species) 
+Parse the 3 joint vcf (the focal species & the 2 newly obtained vcf corresponding to the 2 outgroup species) 
 <em>./script_parser_vcf.py [VCF_focal_species_ONLY_PASS_variants] [VCF outgroup1] [VCF outgroup2]> [Merged_VCF_file]<\em>
 
 Then use awk '{print $X"    "Y...}' (where X and Y correspond to the columns in the [Merged_VCF_file]) to parse the data to obtain the following file format:
