@@ -36,7 +36,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 <pre><code>
 <strong>1/Import sequencing data (./3.2.2/1-Import_RawData/)</strong>
 Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert)
-<em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list of the ftp files</a>
+<em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list containing all ftp addresses</a>
 e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.fastq.gz
     wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_2.fastq.gz</em>
 </code></pre>
