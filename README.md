@@ -101,7 +101,7 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
 <pre><code>
 <strong>Convert the vcf to the smc++ input format (./3.2.5/1_vcf2smcpp.sh)</strong>
-smc++ vcf2smc --cores [nb_cpu] [input_file] [output_file] [chr] [pop1:Ind1,Ind2,Ind3..]
+<em>smc++ vcf2smc --cores [nb_cpu] [input_file] [output_file] [chr] [pop1:Ind1,Ind2,Ind3..]</em>
 <strong>Perform the inference (./3.2.5/2_analysis_smc.sh)</strong>
 
 <strong>Generate a plot (./3.2.5/3_smcpp_plot.sh)</strong>
