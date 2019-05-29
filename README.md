@@ -87,7 +87,7 @@ Generate an input file using Plink:
 <em> ./plink --allow-extra-chr -allow-extra-chr --make-bed --noweb --out [VCF].bed --vcf [VCF] </em>
 FastStructure inferences:
 <em>./structure.py -K [nb_of_clusters] --input [VCF].bed --output [VCF].bed.K[nb_of_clusters] --full --cv [cross-validation steps] --format bed
-./chooseK.py --input=[VCF].bed.K
+./chooseK.py --input=[VCF].bed.K </em>
 </pre></code>
 
 *3.2.4 - Nucleotide diversity*<br/>
