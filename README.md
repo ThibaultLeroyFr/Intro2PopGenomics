@@ -102,8 +102,10 @@ Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
 <pre><code>
 <strong>Convert the vcf to the smc++ input format (./3.2.5/1_vcf2smcpp.sh)</strong>
 <em>smc++ vcf2smc --cores [nb_cpu] [input_vcf_file] [output_smc_data_files] [chr] [pop1:Ind1,Ind2,Ind3..]</em>
+
 <strong>Perform the inference (./3.2.5/2_analysis_smc.sh)</strong>
 <em>smc++ cv --cores [nb_cpu] --out [out] --Nmax [Ne_max] --knots [spline_knots_for_smoothing] [mutation_rate] [smc_data_files]</em>
+
 <strong>Generate a plot (./3.2.5/3_smcpp_plot.sh)</strong>
 <em>smc++ plot [outfile.pdf] -g 1 -c [infile_model.final.json]
 (-c produces a CSV-formatted table: this file is also available ./3.2.5/Rscript_plot/plot_generation.csv)</em>
@@ -138,10 +140,17 @@ Detect the ancestral allele & compute allele frequencies
 <strong>Deleterious variant prediction (./3.2.6/Scripts_provean/) </strong>
 Softwares needed: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download">blast+</a> & <a href="http://provean.jcvi.org/downloads.php">provean</a>
 Follow each step in the order indicated (from script 01 to script 08)
+<pre><code>
 
 3.2.7 - Fst & genome scans
 <pre><code>
+<strong>Compute Fst from vcf (./3.2.7/script_compute_Fst/script_vcftools_Fst.sh) </strong>
+Softwares needed: <a href="http://vcftools.sourceforge.net/">vcftools</a>  
+<em>./vcftools --vcf [VCF] --weir-fst-pop [IDs_sp1] --weir-fst-pop [IDs_sp2] --fst-window-size [window_size_in_bp] --fst-window-step [size_window_step_in_bp]
+where [IDs_sp1] corresponds to a file with te list of all individuals per pop (require the same ID as in the vcf)<\em>
 
+To compute Fst on non-overlapping sliding windows (preferred), use the same value for both [window_size_in_bp] and [size_window_step_in_bp]
+To compute per-SNP Fst values, set [window_size_in_bp] = 1 and [size_window_step_in_bp] = 1
 </pre></code>
 
 ### Pool-seq data:</br>
