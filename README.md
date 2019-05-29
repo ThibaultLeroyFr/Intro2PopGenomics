@@ -3,7 +3,7 @@ This github directory hosts all scripts used to perform the analyses shown in in
 
 >*Leroy, T & Rougemont, Q. 2019. Population genetics analysis methods: from population structure inferences to genome scans for selection. In: Molecular Plant Taxonomy (Springer)*
 
-Please send an email to both thibault.leroy@umontpellier.fr and quentinrougemont@orange.fr for questions regarding these scripts or for full-text requests.
+Please send an email to both <a href="mailto:hibault.leroy@umontpellier.fr?subject=[Intro2popGenomics-Github]">Thibault </a>t and quentinrougemont@orange.fr for questions regarding these scripts or for full-text requests.
 
 ## Foreword
 
