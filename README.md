@@ -34,7 +34,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 *3.2.2 : From raw data to VCF*</br>
 
 <pre><code>
-<strong>Import sequencing data (./1-Import_RawData0)</strong>
+<strong>1/Import sequencing data (./1-Import_RawData0)</strong>
 Softwares needed: wget (ftp-transfert)
 <em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list of the ftp files</a>
 e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.fastq.gz
@@ -42,13 +42,13 @@ e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.f
 </code></pre>
 
 <pre><code>
-<strong>Read trimming (./2-Trimming)</strong>
+<strong>2/Read trimming (./2-Trimming)</strong>
 Softwares needed: Trimmomatic
 <em>java -Xmx4g -jar ./trimmomatic-0.33.jar PE -threads 1 -phred33 "[file]_1.fastq.gz [file]_2.fastq.gz [file]_1_cleaned.fastq.gz [file]_1_cleaned_unpaired.fastq.gz [file]_2_cleaned.fastq.gz [file]_2_cleaned_unpaired.fastq.gz ILLUMINACLIP:./adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50</em>
 </pre></code>
 
 <pre><code>
-<strong>Downloading & indexing a reference genome (./3-Download_Index_references)</strong>
+<strong>3/Downloading & indexing a reference genome (./3-Download_Index_references)</strong>
 Softwares needed: wget (ftp-transfert), BWA, Samtools & Picard (indexing)
 <em>Asian rice genome: wget ftp://ftp.ensemblgenomes.org/pub/plants/release-42/fasta/oryza_sativa/dna/Oryza_sativa.IRGSP-1.0.dna_sm.toplevel.fa.gz
 BWA: bwa index -a bwtsw [fasta]
@@ -57,18 +57,18 @@ Picard: java -Xmx4g  -jar picard.jar  CreateSequenceDictionary REFERENCE=[fasta]
 </pre></code>
 
 <pre><code>
-<strong>Mapping & Individual Calling (./4-PipelineMappingCalling)</strong>
+<strong>4/Mapping & Individual Calling (./4-PipelineMappingCalling)</strong>
 Softwares needed: BWA (mapping), Samtools (filtering), Picard (removing duplicates) & GATK (creating gVCF files)
 <em>bash 1_mapping.sh [RawData_Directory] [File_Trim_Paired_1] [File_Trim_Paired_2] [File_Trim_Unpaired_1] [File_Trim_Unpaired_2] [Reference_Genome] [Number_of_CPU_to_use]
 bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Number_of_CPU_to_use] </em>
 </pre></code>
 
 <pre><code>
-<strong> Joint Genotyping (./5-Joint_genotyping)</strong>
+<strong>5/Joint Genotyping (./5-Joint_genotyping)</strong>
 <em> bash 3_intervals_jointgenotyping.sh [reference_genome] [nb_cpus]  </em>
 </pre></code>
 
 <pre><code>
-<strong> Filtering variants (./6-Variant_Filtration)</strong>
+<strong>6/Filtering variants (./6-Variant_Filtration)</strong>
 <em> ./VariantFiltrationVCF.py -q 2.0 -s 60.0 -m 40.0 -n -2.0 -r -2.0 -w 45000 -f [VCF] > [filtered_VCF] </em>
 </pre></code>
