@@ -1,13 +1,11 @@
-## Introduction to population genomics
+# Introduction to population genomics
 This github directory hosts all scripts used to perform the analyses shown in in the book chapter of Leroy & Rougemont (2019).
 
 >*Leroy, T & Rougemont, Q. 2019. Population genetics analysis methods: from population structure inferences to genome scans for selection. In: Molecular Plant Taxonomy (Springer)*
 
 Please send an email to both thibault.leroy@umontpellier.fr and quentinrougemont@orange.fr for questions regarding these scripts or for full-text requests.
 
-### Important note
-Our scripts are not standalone executables. Quite the contrary, these scripts (deliberately) require some simple edits to adjust to your data. Editing script is probably the best way to learn how a script works, to detect and correct the errors and, more broadly, to start learning how to code. So please take some time to read the scripts and, ideally, to briefly look at the software user manuals. Change the paths to files and programs to adjust the scripts to your computer architecture. Do not hesitate to send emails in case of major computational issues. 
-
+## Foreword
 
 ### Table of contents:<br/>
 *The github repository follow the same organisation as in the book chapter.*<br/>
@@ -26,6 +24,26 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 *3.3.6 - Genome Scan for Selection* <br/>
 *3.3.7 - Genotype-Environment associations* <br/>
 
+
+### Important note
+Our scripts are not standalone executables. Quite the contrary, these scripts (deliberately) require some simple edits to adjust to your data. Editing script is probably the best way to learn how a script works, to detect and correct the errors and, more broadly, to start learning how to code. So please take some time to read the scripts and, ideally, to briefly look at the software user manuals. Change the paths to files and programs to adjust the scripts to your computer architecture. Do not hesitate to send emails in case of major computational issues. 
+
+
+## Details
 ### Individual data:<br/>
 *3.2.2 : From raw data to VCF*<br/>
--> First import the data (./Import_RawData)
+
+
+```
+- Import sequencing data (./1-Import_RawData)<br/>
+Softwares needed: wget (ftp-transfert) <br/>
+
+```
+
+```
+- Read trimming (./2-Trimming)<br/>
+Softwares needed: Trimmomatic <br/>
+java -Xmx4g -jar ./trimmomatic-0.33.jar PE -threads 1 -phred33 "[file]_1.fastq.gz [file]_2.fastq.gz [file]_1_cleaned.fastq.gz [file]_1_cleaned_unpaired.fastq.gz [file]_2_cleaned.fastq.gz [file]_2_cleaned_unpaired.fastq.gz ILLUMINACLIP:./adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
+```
+
+- 
