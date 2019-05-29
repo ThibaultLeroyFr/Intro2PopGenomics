@@ -67,7 +67,7 @@ bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Numbe
 <pre><code>
 <strong>Perform Principal Component Analysis (./3.2.3/PCA/)</strong>
 R packages needed: <a href="https://bioconductor.org/packages/release/bioc/html/SNPRelate.html/">SNPRelate</a> (& <a href="https://bioconductor.org/packages/release/bioc/html/gdsfmt.html/">gdsfmt</a>)
-<em> Details shown in script_PCA_from_vcf.R (Import & convert the vcf file, compute PCA & generate plots) </em>
+<em>Details shown in script_PCA_from_vcf.R (Import & convert the vcf file, compute PCA & generate plots) </em>
 </pre></code>
 
 <pre><code>
@@ -91,3 +91,6 @@ Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/
 <em>bash script_compute_pi_slidwin.sh [referencegenome].scafflength [VCF] [ouputdir] [size_of_sliding_window] [output_prefix]</em>
 (scafflength = file containing the length of each scaffold as computed by ./3.2.2/5-Joint_genotyping/script_scaff_length.py):  
 </pre></code>
+
+<strong>Generate a circlize plot (./3.2.4/Rscript_plot_Circlize/) </strong>
+R package needed: <https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
