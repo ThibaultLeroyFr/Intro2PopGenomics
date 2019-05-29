@@ -36,7 +36,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 <pre><code>
 <strong>Import sequencing data (./1-Import_RawData0)</strong>
 Softwares needed: wget (ftp-transfert)
-<em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list of ftp files</a>
+<em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list of the ftp files</a>
 e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.fastq.gz
     wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_2.fastq.gz</em>
 </code></pre>
@@ -49,4 +49,4 @@ Softwares needed: Trimmomatic
 <em>java -Xmx4g -jar ./trimmomatic-0.33.jar PE -threads 1 -phred33 "[file]_1.fastq.gz [file]_2.fastq.gz [file]_1_cleaned.fastq.gz [file]_1_cleaned_unpaired.fastq.gz [file]_2_cleaned.fastq.gz [file]_2_cleaned_unpaired.fastq.gz ILLUMINACLIP:./adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50</em>
 </pre></code>
 
-- 
+
