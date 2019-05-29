@@ -41,7 +41,7 @@ Softwares needed: wget (ftp-transfert)
 
 
 <pre><code>
-<b>Read trimming (./2-Trimming)
+<strong>Read trimming (./2-Trimming)</strong>
 
 Softwares needed: Trimmomatic
 <i>java -Xmx4g -jar ./trimmomatic-0.33.jar PE -threads 1 -phred33 "[file]_1.fastq.gz [file]_2.fastq.gz [file]_1_cleaned.fastq.gz [file]_1_cleaned_unpaired.fastq.gz [file]_2_cleaned.fastq.gz [file]_2_cleaned_unpaired.fastq.gz ILLUMINACLIP:./adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50
