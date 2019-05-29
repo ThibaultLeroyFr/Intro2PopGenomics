@@ -58,7 +58,7 @@ Picard: java -Xmx4g  -jar picard.jar  CreateSequenceDictionary REFERENCE=[fasta]
 
 <pre><code>
 <strong>4/Mapping & Individual Calling (./3.2.2/4-PipelineMappingCalling/)</strong>
-Softwares needed: <a href="https://sourceforge.net/projects/bio-bwa/files/">BWA</a> (mapping), <a href="http://samtools.sourceforge.net/">Samtools</a> (filtering), <a href="https://broadinstitute.github.io/picard/">Picard</a>  (removing duplicates) & <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> (creating gVCF files)
+Softwares needed: <a href="https://sourceforge.net/projects/bio-bwa/files/">BWA</a> (mapping), <a href="http://samtools.sourceforge.net/">Samtools</a> (filtering), <a href="https://broadinstitute.github.io/picard/">Picard</a> (removing duplicates) & <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> (creating gVCF files)
 <em>bash 1_mapping.sh [RawData_Directory] [File_Trim_Paired_1] [File_Trim_Paired_2] [File_Trim_Unpaired_1] [File_Trim_Unpaired_2] [Reference_Genome] [Number_of_CPU_to_use]
 bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Number_of_CPU_to_use] </em>
 </pre></code>
