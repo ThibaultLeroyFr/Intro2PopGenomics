@@ -103,7 +103,7 @@ Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
 Convert the vcf:
 Perform the inference
 Generate a plot
-(to generate a R plot using the R package <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R)
+<em>(to generate a R plot using the R package <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R)</em>
 </pre></code>
 
 
