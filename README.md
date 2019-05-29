@@ -132,9 +132,12 @@ Then use awk '{print $X"    "Y...}' (where X and Y correspond to the columns in 
 Detect the ancestral allele & compute allele frequencies
 <em>./script_ancestral_derived_counts.py [this_infile] > [file_with_derived_counts]
 ./script_compute_derivedallelefreq.py [file_with_derived_counts] > [files_with_derivedallfreq]<\em>
-
 </pre></code>
 
+<pre><code>
+<strong>Deleterious variant prediction (./3.2.6/Scripts_provean/) </strong>
+Softwares needed: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download">blast+</a> & <a href="http://provean.jcvi.org/downloads.php">provean</a>
+Follow each step in the order indicated (from script 01 to script 08)
 
 3.2.7 - Fst & genome scans
 <pre><code>
