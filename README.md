@@ -94,4 +94,4 @@ Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/
 <strong>Generate a circlize plot (./3.2.4/Rscript_plot_Circlize/) </strong>
 R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
 <em>Details shown in script_circlize_GC_pi_ROD_Africanrice.R (Import the file containing the summary statistics & generate a circlize plot) </em>
-(the file containing the pi values was made available at ./3.2.4/Results_pi/Genomic_pi_ROD_010419.withoutNA.txt)
+(the file containing the summary statistics was made available at ./3.2.4/Results_pi/Genomic_pi_ROD_010419.withoutNA.txt)
