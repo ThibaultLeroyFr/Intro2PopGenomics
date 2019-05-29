@@ -35,7 +35,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 
 <pre><code>
 <strong>1/Import sequencing data (./3.2.2/1-Import_RawData/)</strong>
-Softwares needed: wget (ftp-transfert)
+Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert)
 <em><a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">Have a look here to get a list of the ftp files</a>
 e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.fastq.gz
     wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_2.fastq.gz</em>
@@ -43,13 +43,13 @@ e.g.wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR200/000/ERR2008850/ERR2008850_1.f
 
 <pre><code>
 <strong>2/Read trimming (./3.2.2/2-Trimming/)</strong>
-Softwares needed: Trimmomatic
+Softwares needed: <a href="https://github.com/timflutre/trimmomatic">Trimmomatic</a>
 <em>java -Xmx4g -jar ./trimmomatic-0.33.jar PE -threads 1 -phred33 "[file]_1.fastq.gz [file]_2.fastq.gz [file]_1_cleaned.fastq.gz [file]_1_cleaned_unpaired.fastq.gz [file]_2_cleaned.fastq.gz [file]_2_cleaned_unpaired.fastq.gz ILLUMINACLIP:./adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:50</em>
 </pre></code>
 
 <pre><code>
 <strong>3/Downloading & indexing a reference genome (./3.2.2/3-Download_Index_references/)</strong>
-Softwares needed: wget (ftp-transfert), BWA, Samtools & Picard (indexing)
+Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert), <a href="https://sourceforge.net/projects/bio-bwa/files/">BWA</a>, <a href="http://samtools.sourceforge.net/">Samtools</a> & <a href="https://broadinstitute.github.io/picard/">Picard</a> (indexing) 
 <em>Asian rice genome: wget ftp://ftp.ensemblgenomes.org/pub/plants/release-42/fasta/oryza_sativa/dna/Oryza_sativa.IRGSP-1.0.dna_sm.toplevel.fa.gz
 BWA: bwa index -a bwtsw [fasta]
 Samtools: samtools faidx [fasta]
@@ -58,7 +58,7 @@ Picard: java -Xmx4g  -jar picard.jar  CreateSequenceDictionary REFERENCE=[fasta]
 
 <pre><code>
 <strong>4/Mapping & Individual Calling (./3.2.2/4-PipelineMappingCalling/)</strong>
-Softwares needed: BWA (mapping), Samtools (filtering), Picard (removing duplicates) & GATK (creating gVCF files)
+Softwares needed: <a href="https://sourceforge.net/projects/bio-bwa/files/">BWA</a> (mapping), <a href="http://samtools.sourceforge.net/">Samtools</a> (filtering), <a href="https://broadinstitute.github.io/picard/">Picard</a>  (removing duplicates) & <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> (creating gVCF files)
 <em>bash 1_mapping.sh [RawData_Directory] [File_Trim_Paired_1] [File_Trim_Paired_2] [File_Trim_Unpaired_1] [File_Trim_Unpaired_2] [Reference_Genome] [Number_of_CPU_to_use]
 bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Number_of_CPU_to_use] </em>
 </pre></code>
