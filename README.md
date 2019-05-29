@@ -116,15 +116,16 @@ It is also possible to use the newly generated .csv file to generate the plot un
 <strong> Counts the number of derived alleles</strong>
 
 <strong>Download the raw data for the outgroup species -> generate joint VCF / outgroup species (./3.2.6/Scripts_derived_alleles/download_trimming_mapping_data_other_species)</strong>
-<em>Same steps than in the section "3.2.2 : From raw data to VCF"
+<em>Same steps than in the section "3.2.2 : From raw data to VCF"<\em>
     
-<strong>  Detect the ancestral state & compute allele frequencies(./3.2.6/Scripts_derived_alleles/) </strong>
+<strong>Detect the ancestral state & compute allele frequencies(./3.2.6/Scripts_derived_alleles/) </strong>
 
 Parse the 3 joint vcf (focal species & 2 outgroup species) 
 <em>./script_parser_vcf.py [VCF_focal_species_ONLY_PASS_variants] [VCF outgroup1] [VCF outgroup2]> [Merged_VCF_file]<\em>
 Then use awk '{print $X"    "Y...}' (where X and Y correspond to the columns in the [Merged_VCF_file]) to parse the data to obtain the following file format:
-<em>#chr    pos focal_All1   focal_All2  outgroup1_all1  outgroup1_all2 outgroup2_all1   outgroup2_all2
-#1	1248	G	A	G	.	G	.<\em>
+<em>chr    pos focal_All1   focal_All2  outgroup1_all1  outgroup1_all2 outgroup2_all1   outgroup2_all2
+1	1248	G	A	G	.	G	.<\em>
+
 Detect the ancestral allele & compute allele frequencies
 <em>./script_ancestral_derived_counts.py [this_infile] > [file_with_derived_counts]
 ./script_compute_derivedallelefreq.py [file_with_derived_counts] > [files_with_derivedallfreq]<\em>
