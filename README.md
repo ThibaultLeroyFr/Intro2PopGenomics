@@ -107,7 +107,7 @@ Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
 <strong>Generate a plot (./3.2.5/3_smcpp_plot.sh)</strong>
 <em>smc++ plot [outfile.pdf] -g 1 -c [infile_model.final.json]
 (-c produces a CSV-formatted table: this file is also available ./3.2.5/Rscript_plot/plot_generation.csv)</em>
-<em>(to generate a R plot using the R package <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R)</em>
+It is also possible to generate a R plot using the R package from this CSV file <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: <em>see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R</em>
 </pre></code>
 
 
