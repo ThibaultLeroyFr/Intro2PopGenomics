@@ -100,9 +100,9 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 *3.2.5 - Historical population sizes*<br/>
 <pre><code>
 Software needed: <a href="https://github.com/popgenmethods/smcpp">smc++</a>
-Convert the vcf:
-Perform the inference
-Generate a plot
+<strong>Convert the vcf</strong>
+<strong>Perform the inference</strong>
+<strong>Generate a plot</strong>
 <em>(to generate a R plot using the R package <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>: see ./3.2.5/Rscript_plot/script_generateplot_smcpp_220519.R)</em>
 </pre></code>
 
