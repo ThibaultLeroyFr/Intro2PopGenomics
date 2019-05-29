@@ -50,3 +50,10 @@ Softwares needed: Trimmomatic
 </pre></code>
 
 
+<pre><code>
+<strong>Read trimming (./3-Download_Index_references)</strong>
+<em>wget ftp://ftp.ensemblgenomes.org/pub/plants/release-42/fasta/oryza_sativa/dna/Oryza_sativa.IRGSP-1.0.dna_sm.toplevel.fa.gz
+BWA: bwa index -a bwtsw [fasta]
+Samtools: samtools faidx [fasta]
+Picard: java -Xmx4g  -jar picard.jar  CreateSequenceDictionary REFERENCE=[fasta]  OUTPUT=[fasta].dict </em>
+</pre></code>
