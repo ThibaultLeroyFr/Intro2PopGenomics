@@ -90,7 +90,10 @@ Scripts were developed by Leroy et al. 2019 bioRxiv 505610, ver. 4 peer-reviewed
 Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/7484705">seq_stat</a>
 <em>bash script_compute_pi_slidwin.sh [referencegenome].scafflength [VCF] [ouputdir] [size_of_sliding_window] [output_prefix]</em>
 (scafflength = file containing the length of each scaffold as computed by ./3.2.2/5-Joint_genotyping/script_scaff_length.py):  
-</pre></code>
 
 <strong>Generate a circlize plot (./3.2.4/Rscript_plot_Circlize/) </strong>
 R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
+<em>Details shown in script_circlize_GC_pi_ROD_Africanrice.R (Import & convert the vcf file, compute PCA & generate plots) </em>
+(the input file was made available : ./3.2.4/Results_pi/Genomic_pi_ROD_010419.withoutNA.txt)
+[logo]: https://github.com/ThibaultLeroyFr/Intro2PopGenomics/tree/master/3.2.4/Rscript_plot_Circlize/Fig_pi_ROD_D.png "Circlize_pi"
+</pre></code>
