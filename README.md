@@ -57,11 +57,18 @@ Picard: java -Xmx4g  -jar picard.jar  CreateSequenceDictionary REFERENCE=[fasta]
 </pre></code>
 
 <pre><code>
-<strong>Downloading & indexing a reference genome (./4-PipelineMappingCalling)</strong>
-Softwares needed: BWA (mapping), Samtools (filtering) & Picard (removing duplicates)
+<strong>Mapping & Individual Calling (./4-PipelineMappingCalling)</strong>
+Softwares needed: BWA (mapping), Samtools (filtering), Picard (removing duplicates) & GATK (creating gVCF files)
 <em>bash 1_mapping.sh [RawData_Directory] [File_Trim_Paired_1] [File_Trim_Paired_2] [File_Trim_Unpaired_1] [File_Trim_Unpaired_2] [Reference_Genome] [Number_of_CPU_to_use]
 bash 2_snpindel_callingGVCF.sh [ID] [Reference_Genome] [output_directory] [Number_of_CPU_to_use] </em>
 </pre></code>
 
 <pre><code>
+<strong> Joint Genotyping (./5-Joint_genotyping)</strong>
+<em> bash 3_intervals_jointgenotyping.sh [reference_genome] [nb_cpus]  </em>
+</pre></code>
+
+<pre><code>
+<strong> Filtering variants (./6-Variant_Filtration)</strong>
+<em> ./VariantFiltrationVCF.py -q 2.0 -s 60.0 -m 40.0 -n -2.0 -r -2.0 -w 45000 -f [VCF] > [filtered_VCF] </em>
 </pre></code>
