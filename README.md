@@ -109,3 +109,29 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 <pre><code>
 
 </pre></code>
+
+### Pool-seq data:</br>
+*3.3.1 - Pool-seq vs. individual data* <br/>
+<pre><code>
+
+</pre></code>
+*3.3.3 - From raw data to allele counts* <br/>
+<pre><code>
+
+</pre></code>
+*3.3.4 - Population splits & mixtures* <br/>
+<pre><code>
+
+</pre></code>
+*3.3.5 - Fst estimates* <br/>
+<pre><code>
+
+</pre></code>
+*3.3.6 - Genome Scan for Selection* <br/>
+<pre><code>
+
+</pre></code>
+*3.3.7 - Genotype-Environment associations* <br/>
+<pre><code>
+
+</pre></code>
