@@ -140,18 +140,27 @@ Detect the ancestral allele & compute allele frequencies
 <strong>Deleterious variant prediction (./3.2.6/Scripts_provean/) </strong>
 Softwares needed: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download">blast+</a> & <a href="http://provean.jcvi.org/downloads.php">provean</a>
 Follow each step in the order indicated (from script 01 to script 08)
-<pre><code>
+</pre></code>
 
 3.2.7 - Fst & genome scans
 <pre><code>
 <strong>Compute Fst from vcf (./3.2.7/script_compute_Fst/script_vcftools_Fst.sh) </strong>
 Softwares needed: <a href="http://vcftools.sourceforge.net/">vcftools</a>  
 <em>./vcftools --vcf [VCF] --weir-fst-pop [IDs_sp1] --weir-fst-pop [IDs_sp2] --fst-window-size [window_size_in_bp] --fst-window-step [size_window_step_in_bp]
-where [IDs_sp1] corresponds to a file with te list of all individuals per pop (require the same ID as in the vcf)<\em>
+where [IDs_sp1], [IDs_sp2] , ... correspond to a file containing a list of all individuals for sp1, sp2, ... (require the same ID as in the vcf)<\em>
 
 To compute Fst on non-overlapping sliding windows (preferred), use the same value for both [window_size_in_bp] and [size_window_step_in_bp]
 To compute per-SNP Fst values, set [window_size_in_bp] = 1 and [size_window_step_in_bp] = 1
+
+To generate a circlize plot of the Fst values:
+R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
+<em>see ./3.2.7/Fst/Rscript_plot_circlize/script_circlize_Fst_africanrice.R<\em>
 </pre></code>
+
+<pre><code>
+<strong>Perform (./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R) </strong>
+R script needed: R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index.html">pcadapt</a> (more details: <a href="https://cran.r-project.org/web/packages/pcadapt/vignettes/pcadapt.html">here</a>) 
+<em>See ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R<\em>
 
 ### Pool-seq data:</br>
 *3.3.1 - Pool-seq vs. individual data* <br/>
