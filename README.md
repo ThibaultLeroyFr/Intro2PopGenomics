@@ -158,9 +158,10 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 </pre></code>
 
 <pre><code>
-<strong>Perform (./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R) </strong>
+<strong>Perform outlier detection (./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R) </strong>
 R script needed: R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index.html">pcadapt</a> (more details: <a href="https://cran.r-project.org/web/packages/pcadapt/vignettes/pcadapt.html">here</a>) 
-<em>See ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R<\em>
+<em>To import the data, compute PCA, perform scans & generate Manhattan plots, see ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R<\em>
+</pre></code>
 
 ### Pool-seq data:</br>
 *3.3.1 - Pool-seq vs. individual data* <br/>
