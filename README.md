@@ -93,4 +93,4 @@ Software needed: <a href="https://figshare.com/s/122efbec2e3632188674#/articles/
 </pre></code>
 
 <strong>Generate a circlize plot (./3.2.4/Rscript_plot_Circlize/) </strong>
-R package needed: <https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
+R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
