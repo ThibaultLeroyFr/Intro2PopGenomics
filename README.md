@@ -34,7 +34,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 *3.2.2 : From raw data to VCF*<br/>
 
 <pre><code>
-<b>Import sequencing data (./1-Import_RawData0)
+<b>Import sequencing data (./1-Import_RawData0)<\b>
 Softwares needed: wget (ftp-transfert)
 </code></pre>
 
