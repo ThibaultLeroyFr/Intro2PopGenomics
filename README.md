@@ -36,7 +36,7 @@ Our scripts are not standalone executables. Quite the contrary, these scripts (d
 <pre><code>
 <b>Import sequencing data (./1-Import_RawData0)
 Softwares needed: wget (ftp-transfert)
-
+</code></pre>
 
 
 
