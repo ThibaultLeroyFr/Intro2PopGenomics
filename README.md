@@ -82,9 +82,10 @@ R packages needed: SNPRelate (& gdsfmt)
 
 <pre><code>
 <strong>Infer ancestry proportions (./3.2.3/fastStructure/)</strong>
-Software needed: Plink & Faststructure
-<em> Generate an input file using Plink:
-./plink --allow-extra-chr -allow-extra-chr --make-bed --noweb --out [VCF].bed --vcf [VCF]
-./structure.py -K [nb_of_clusters] --input [VCF].bed --output [VCF].bed.K[nb_of_clusters] --full --cv [cross-validation steps] --format bed
- </em>
+Software needed: Plink & <a href="https://rajanil.github.io/fastStructure/">fastStructure</a>
+Generate an input file using Plink:
+<em> ./plink --allow-extra-chr -allow-extra-chr --make-bed --noweb --out [VCF].bed --vcf [VCF] </em>
+FastStructure inferences:
+<em>./structure.py -K [nb_of_clusters] --input [VCF].bed --output [VCF].bed.K[nb_of_clusters] --full --cv [cross-validation steps] --format bed
+./chooseK.py --input=[VCF].bed.K
 </pre></code>
