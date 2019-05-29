@@ -89,3 +89,9 @@ FastStructure inferences:
 <em>./structure.py -K [nb_of_clusters] --input [VCF].bed --output [VCF].bed.K[nb_of_clusters] --full --cv [cross-validation steps] --format bed
 ./chooseK.py --input=[VCF].bed.K
 </pre></code>
+
+*3.2.4 - Nucleotide diversity*<br/>
+<pre><code>
+Software needed: None
+Scripts were developed by Leroy et al. 2019 bioRxiv 505610, ver. 4 peer-reviewed and recommended by PCI Evolutionary Biology (paper: scripts: <a href="https://www.biorxiv.org/content/biorxiv/early/2019/05/24/505610.full.pdf">here</a>, scripts: <a href="https://figshare.com/s/122efbec2e3632188674">here</a>)
+</pre></code>
