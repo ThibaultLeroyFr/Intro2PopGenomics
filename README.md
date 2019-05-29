@@ -117,7 +117,7 @@ It is also possible to use the newly generated .csv file to generate the plot un
 
 1/Generate VCF for the outgroup species (./3.2.6/Scripts_derived_alleles/download_trimming_mapping_data_other_species)</strong>
 <em>Download the raw data for the outgroup species -> generate joint VCF / outgroup species
-Same steps than in the section "3.2.2 : From raw data to VCF"<\em>
+Same steps than in the section "3.2.2 : From raw data to VCF"</em>
     
 2/Detect the ancestral state & compute allele frequencies(./3.2.6/Scripts_derived_alleles/script_vcfoutgroup_to_ancestral_derived.sh) 
 
