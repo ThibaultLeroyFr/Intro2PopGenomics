@@ -129,11 +129,11 @@ Parse the 3 joint vcf (the focal species & the 2 newly obtained vcf correspondin
 
 Then use awk '{print $X"    "Y...}' (where X and Y correspond to the columns in the [Merged_VCF_file]) to parse the data to obtain the following file format:
 <em>chr    pos focal_All1   focal_All2  outgroup1_all1  outgroup1_all2 outgroup2_all1   outgroup2_all2
-1	1248	G	A	G	.	G	.<\em>
+1	1248	G	A	G	.	G	.</em>
 
 Detect the ancestral allele & compute allele frequencies
 <em>./script_ancestral_derived_counts.py [this_infile] > [file_with_derived_counts]
-./script_compute_derivedallelefreq.py [file_with_derived_counts] > [files_with_derivedallfreq]<\em>
+./script_compute_derivedallelefreq.py [file_with_derived_counts] > [files_with_derivedallfreq]</em>
 </pre></code>
 
 <pre><code>
@@ -147,14 +147,14 @@ Follow each step in the order indicated (from script 01 to script 08)
 <strong>Compute Fst from vcf (./3.2.7/script_compute_Fst/script_vcftools_Fst.sh) </strong>
 Softwares needed: <a href="http://vcftools.sourceforge.net/">vcftools</a>  
 <em>./vcftools --vcf [VCF] --weir-fst-pop [IDs_sp1] --weir-fst-pop [IDs_sp2] --fst-window-size [window_size_in_bp] --fst-window-step [size_window_step_in_bp]
-where [IDs_sp1], [IDs_sp2] , ... correspond to a file containing a list of all individuals for sp1, sp2, ... (require the same ID as in the vcf)<\em>
+where [IDs_sp1], [IDs_sp2] , ... correspond to a file containing a list of all individuals for sp1, sp2, ... (require the same ID as in the vcf)</em>
 
 To compute Fst on non-overlapping sliding windows (preferred), use the same value for both [window_size_in_bp] and [size_window_step_in_bp]
 To compute per-SNP Fst values, set [window_size_in_bp] = 1 and [size_window_step_in_bp] = 1
 
 To generate a circlize plot of the Fst values:
 R package needed: <a href="https://cran.r-project.org/web/packages/circlize/index.html">circlize</a> (more details: <a href="https://jokergoo.github.io/circlize_book/book/">here</a>) 
-<em>see ./3.2.7/Fst/Rscript_plot_circlize/script_circlize_Fst_africanrice.R<\em>
+<em>see ./3.2.7/Fst/Rscript_plot_circlize/script_circlize_Fst_africanrice.R</em>
 </pre></code>
 
 <pre><code>
@@ -170,7 +170,7 @@ Excel file needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/PoolSe
 <em>A simulation comparing the precision in allele frequency estimation for two sequencing strategies: pool-seq & individual sequencing (see <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.12360">here</a> for details).
 Here a growing number of individuals sequenced in a pool at 100X is compared to a strategy assuming 20 individuals sequenced separately at 20X. 
 Results are shown in ./3.3.1/PIFs_simulation/Poolseq_vs_individual_100xpoolvs20xNbindividuals.sed. 
-See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_individual_sequencing.R. <\em>
+See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_individual_sequencing.R. </em>
 </pre></code>
 *3.3.3 - From raw data to allele counts* <br/>
 <pre><code>
