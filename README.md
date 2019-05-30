@@ -174,12 +174,26 @@ See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_indivi
 </pre></code>
 *3.3.3 - From raw data to allele counts* <br/>
 <pre><code>
-1/ Downloading sequencing reads & trimming (see section 3.2.2 above)
+<strong>1/ Downloading sequencing reads, trimming & reference genome indexing (see section 3.2.2 above)</strong>
 Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert) & <a href="https://github.com/timflutre/trimmomatic">Trimmomatic</a> (read trimming)
-Raw data are available <a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">here</a>
-A correspondence table is available (./3.2.2/)
-2/ 
+See <a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">here</a> for a list of all sequencing data available (1 run accession = 1 lane, 4 lanes/pool). A correspondence table is available (./3.3.3/IDs_correspondence_table.txt/)
+The oak reference genome (PM1N) can be downloaded from <a href="http://www.oakgenome.fr/?page_id=587">oakgenome</a>.
+
+<strong>2/ Mapping, sorting & removing duplicates (see ./3.3.3/4-Mapping/mapping_O16.sh)</strong>
+Softwares needed: <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">bowtie2</a>, <a href="http://samtools.sourceforge.net/">Samtools</a> (filtering & merging bams), <a href="https://broadinstitute.github.io/picard/">Picard</a> (sorting & removing duplicates)
+To run bowtie2 with the sensitive end-to-end mode (see <a href="http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">here</a> for more details): 
+<em>bowtie2 -p [nb_CPUs_to_use] -k [search_alignments] -q --sensitive -x $ref -1 [file_containing_reads_end1] -2 [file_containing_reads_end2] -t --un-gz [output_file_reads_not_aligned] | samtools view -Shb /dev/stdin > [outfile.bam]
+picard-tools/SortSam.jar INPUT= [outfile.bam] OUTPUT=[outfile.bam].pisorted SORT_ORDER=coordinate
+picard-tools/MarkDuplicates.jar INPUT=[outfile.bam].pisorted OUTPUT=[outfile.bam].pisorted.dedup METRICS_FILE=[output_file_metrics] VALIDATION_STRINGENCY=LENIENT MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 REMOVE_DUPLICATES=true</em>
+samtools merge [total_bam_pop1] [bam_lane1_pop1] [bam_lane2_pop1] [bam_lane3_pop1] [bam_lane4_pop1] 
+
+<strong>3/ Pileup & synchronized pileup  (see ./3.3.3/4-Mapping/mapping_O16.sh)</strong>
+Softwares needed: <a href="http://samtools.sourceforge.net/">Samtools</a> & <a href="https://sourceforge.net/projects/popoolation2/">Popoolation2</a>
+<em>samtools mpileup -f [fasta_genome] [total_bam_pop1] [total_bam_pop2] [total_bam_pop3] ... > [outfile_pileup]
+java -Xmx4g -jar mpileup2sync.jar --input [outfile_pileup] --output [outfile_pileup].sync --fastq-type sanger --min-qual [minimum_base_quality] --threads [nb_CPUs_to_use]</em>
 </pre></code>
+
+
 *3.3.4 - Population splits & mixtures* <br/>
 <pre><code>
 
