@@ -168,13 +168,17 @@ R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index
 <pre><code>
 Excel file needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/PoolSeqUtils/">PIFs</a>  
 <em>A simulation comparing the precision in allele frequency estimation for two sequencing strategies: pool-seq & individual sequencing (see <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.12360">here</a> for details).
-Here a growing number of individuals sequenced in a pool at 100X is compared to a strategy assuming 20 individuals sequenced separately at 20X. 
+Here a strategy based on a growing number of individuals sequenced at a pool coverage of 100X is compared to a strategy assuming 20 individuals sequenced separately at 20X. 
 Results are shown in ./3.3.1/PIFs_simulation/Poolseq_vs_individual_100xpoolvs20xNbindividuals.sed. 
 See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_individual_sequencing.R. </em>
 </pre></code>
 *3.3.3 - From raw data to allele counts* <br/>
 <pre><code>
-
+1/ Downloading sequencing reads & trimming (see section 3.2.2 above)
+Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert) & <a href="https://github.com/timflutre/trimmomatic">Trimmomatic</a> (read trimming)
+Raw data are available <a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">here</a>
+A correspondence table is available (./3.2.2/)
+2/ 
 </pre></code>
 *3.3.4 - Population splits & mixtures* <br/>
 <pre><code>
