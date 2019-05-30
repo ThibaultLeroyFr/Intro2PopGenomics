@@ -187,17 +187,30 @@ picard-tools/SortSam.jar INPUT= [outfile.bam] OUTPUT=[outfile.bam].pisorted SORT
 picard-tools/MarkDuplicates.jar INPUT=[outfile.bam].pisorted OUTPUT=[outfile.bam].pisorted.dedup METRICS_FILE=[output_file_metrics] VALIDATION_STRINGENCY=LENIENT MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 REMOVE_DUPLICATES=true</em>
 samtools merge [total_bam_pop1] [bam_lane1_pop1] [bam_lane2_pop1] [bam_lane3_pop1] [bam_lane4_pop1] 
 
-<strong>3/ Pileup & synchronized pileup  (see ./3.3.3/4-Mapping/mapping_O16.sh)</strong>
+<strong>3/ Pileup & synchronized pileup  (see ./3.3.3/5-Pileup_sync/script_samtools_mpileup.sh)</strong>
 Softwares needed: <a href="http://samtools.sourceforge.net/">Samtools</a> & <a href="https://sourceforge.net/projects/popoolation2/">Popoolation2</a>
 <em>samtools mpileup -f [fasta_genome] [total_bam_pop1] [total_bam_pop2] [total_bam_pop3] ... > [outfile_pileup]
 java -Xmx4g -jar mpileup2sync.jar --input [outfile_pileup] --output [outfile_pileup].sync --fastq-type sanger --min-qual [minimum_base_quality] --threads [nb_CPUs_to_use]</em>
-</pre></code>
 
+<strong>4/ Generate allele count for each position and SNP</strong>
+Software needed: <a href="https://sourceforge.net/projects/popoolation2/">Popoolation2</a>
+<em>popoolation/snp-frequency-diff.pl --input [outfile_pileup].sync --output-prefix [prefix_for_output_files] --min-count [minimum_number_of_alt_alleles] --min-coverage [min_coverage_per_pool] --max-coverage [max_coverage_per_pool]
+./allele_count_withMAF.sh [previous_popoolation_prefix_for_output_files].rc [output-prefix] [tmpfile]</em>
+This second script is just to give an example. You can also the R script <a href="https://cran.r-project.org/web/packages/poolfstat/index.html">poolfstat</a> to generate allele counts from the synchronized file, as described in the Rscript ./3.3.6/script_baypass/generate_baypass_inputfile.R (see section 3.3.6 below)
+</pre></code>
 
 *3.3.4 - Population splits & mixtures* <br/>
 <pre><code>
-
+Software needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home">TreeMix</a>
+<strong>Perform TreeMix simulations (./3.3.4/Script_TreeMix/treemix.sh)</strong>
+<em>for i in {1..10}; do 
+	./treemix-1.13/src/treemix -i [infile] -k 1000 -m $i -o [outfile].m.$i
+done</em>
+<strong>Compute explained variance, draw phylogenetic trees & show residuals (./3.3.4/Script_TreeMix/treemix.sh)</strong>
+R scripts needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home">TreeMix-associated R scripts</a> & <a href="https://cran.r-project.org/web/packages/ape/index.html">ape</a>
+<em>See ./3.3.4/Rscript_TreeMix/script_R_treemix.R for details.</em>
 </pre></code>
+
 *3.3.5 - Fst estimates* <br/>
 <pre><code>
 
