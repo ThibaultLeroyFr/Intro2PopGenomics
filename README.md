@@ -125,7 +125,7 @@ Same steps than in the section "3.2.2 : From raw data to VCF"</em>
 
 In a nutshell:
 Parse the 3 joint vcf (the focal species & the 2 newly obtained vcf corresponding to the 2 outgroup species) 
-<em>./script_parser_vcf.py [VCF_focal_species_ONLY_PASS_variants] [VCF outgroup1] [VCF outgroup2]> [Merged_VCF_file]<\em>
+<em>./script_parser_vcf.py [VCF_focal_species_ONLY_PASS_variants] [VCF outgroup1] [VCF outgroup2]> [Merged_VCF_file]</em>
 
 Then use awk '{print $X"    "Y...}' (where X and Y correspond to the columns in the [Merged_VCF_file]) to parse the data to obtain the following file format:
 <em>chr    pos focal_All1   focal_All2  outgroup1_all1  outgroup1_all2 outgroup2_all1   outgroup2_all2
@@ -160,7 +160,7 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 <pre><code>
 <strong>Perform outlier detection (./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R) </strong>
 R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index.html">pcadapt</a> (more details: <a href="https://cran.r-project.org/web/packages/pcadapt/vignettes/pcadapt.html">here</a>) 
-<em>To import the data, compute PCA, perform scans & generate Manhattan plots, see ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R<\em>
+<em>To import the data, compute PCA, perform scans & generate Manhattan plots, see ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R</em>
 </pre></code>
 
 ### Pool-seq data - Application to the sessile oak data </br>
