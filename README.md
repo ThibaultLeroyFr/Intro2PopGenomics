@@ -29,8 +29,8 @@ Please send an email to <a href="mailto:thibault.leroy@umontpellier.fr;quentinro
 Our scripts are not standalone executables. Quite the contrary, these scripts (deliberately) require some simple edits to adjust to your data. Editing script is probably the best way to learn how a script works, to detect and correct the errors and, more broadly, to start learning how to code. So please take some time to read the scripts and, ideally, to briefly look at the software user manuals. Change the paths to files and programs to adjust the scripts to your computer architecture. 
 
 
-## Details
-### Individual data:</br>
+## Overview
+### Individual data - Application to the African Rice data </br>
 *3.2.2 : From raw data to VCF*</br>
 
 <pre><code>
@@ -159,14 +159,15 @@ R package needed: <a href="https://cran.r-project.org/web/packages/circlize/inde
 
 <pre><code>
 <strong>Perform outlier detection (./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R) </strong>
-R script needed: R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index.html">pcadapt</a> (more details: <a href="https://cran.r-project.org/web/packages/pcadapt/vignettes/pcadapt.html">here</a>) 
+R package needed: <a href="https://cran.r-project.org/web/packages/pcadapt/index.html">pcadapt</a> (more details: <a href="https://cran.r-project.org/web/packages/pcadapt/vignettes/pcadapt.html">here</a>) 
 <em>To import the data, compute PCA, perform scans & generate Manhattan plots, see ./3.2.7/pcadapt/Rscript_pcadapt/script_pcadapt.R<\em>
 </pre></code>
 
-### Pool-seq data:</br>
+### Pool-seq data - Application to the sessile oak data </br>
 *3.3.1 - Pool-seq vs. individual data* <br/>
 <pre><code>
-
+Excel file needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/PoolSeqUtils/">PIFs</a>  
+A simulation comparing the precision in allele frequency estimation for two sequencing strategies: pool-seq & individual sequencing. Here a growing number of individuals sequenced in a pool at 100X is compared to a strategy assuming 20 individuals sequenced separately at 20X. Results are shown in ./3.3.1/PIFs_simulation/Poolseq_vs_individual_100xpoolvs20xNbindividuals.sed. See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_individual_sequencing.R. See <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.12360">here</a> for details.
 </pre></code>
 *3.3.3 - From raw data to allele counts* <br/>
 <pre><code>
