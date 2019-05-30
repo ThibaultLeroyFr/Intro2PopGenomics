@@ -201,11 +201,12 @@ This second script is just to give an example. You can also the R script <a href
 
 *3.3.4 - Population splits & mixtures* <br/>
 <pre><code>
-Software needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home">TreeMix</a>
 <strong>Perform TreeMix simulations (./3.3.4/Script_TreeMix/treemix.sh)</strong>
+Software needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home">TreeMix</a>
 <em>for i in {1..10}; do 
 	./treemix-1.13/src/treemix -i [infile] -k 1000 -m $i -o [outfile].m.$i
 done</em>
+
 <strong>Compute explained variance, draw phylogenetic trees & show residuals (./3.3.4/Script_TreeMix/treemix.sh)</strong>
 R scripts needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home">TreeMix-associated R scripts</a> & <a href="https://cran.r-project.org/web/packages/ape/index.html">ape</a>
 <em>See ./3.3.4/Rscript_TreeMix/script_R_treemix.R for details.</em>
@@ -213,13 +214,29 @@ R scripts needed: <a href="https://bitbucket.org/nygcresearch/treemix/wiki/Home"
 
 *3.3.5 - Fst estimates* <br/>
 <pre><code>
-
+<strong>Compute fixation index (Fst) from synchronized pileup using poolfstat(./3.3.5/)</strong>
+R scripts needed: <a href="https://cran.r-project.org/web/packages/poolfstat/index.html">poolfstat</a>, <a href="https://cran.r-project.org/web/packages/reshape2/index.html">reshape2</a> & <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>
+<em>To import data from the popoolation2 synchronized mpileup format, compute pairwise population population Fst matrix, per-SNP pairwise or among-population Fst values or generate plots, see ./3.3.5/script_poolfstat_Fst_Hivert.R for details.</em>
 </pre></code>
 *3.3.6 - Genome Scan for Selection* <br/>
+
 <pre><code>
+<strong>Generate an infile (./3.3.6/script_baypass/script_baypass.sh)</strong>
+R scripts needed: <a href="https://cran.r-project.org/web/packages/poolfstat/index.html">poolfstat</a>
+From the popoolation2 synchronized mpileup format, the popsync2pooldata & pooldata2genobaypass functions are probably the easiest way to generate the baypass input file<em> (see ./3.3.6/script_baypass/generate_baypass_inputfile.R)</em>
+
+<strong>Perform genome scans to detect candidate SNPs under selection (./3.3.6/script_baypass/script_baypass.sh)</strong>
+Software needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/">BayPass</a>
+<em>i_baypass -npop [nb_pops] -gfile [INFILE] -poolsizefile [FILE_with_popsizes] [+ parameters related to Markov chains, read the BayPass's manual <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]</em>
+
 
 </pre></code>
 *3.3.7 - Genotype-Environment associations* <br/>
 <pre><code>
+<strong>Detect SNPs with clinal variation along environment or phenotypic gradients (./3.3.7/script_baypass_GEA-GPA.sh)</strong>
+Software needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/">BayPass</a>
+<em>i_baypass -npop [nb_pops] -gfile [INFILE] -efile [FILE_with_evironmental] -poolsizefile [FILE_with_popsizes] -scalecov [+ parameters related to Markov chains, read the BayPass's manual <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]
+It is important to use the "-scalecov" option to scale all covariables. </em>
+
 
 </pre></code>
