@@ -5,7 +5,7 @@
 ### INFO
 genus=$(echo "Oryza")
 species=$(echo "barthii")
-listacc=$(echo "ERR2008851 ERR2008852")
+listacc=$(echo "ERR2008851 ERR2008852 ERR2008853")
 refile=$(echo "/sandbox/users/tleroy/AfricanRice/Oryza_sativa/genome/Oryza_sativa.IRGSP-1.0.dna_sm.toplevel.fa" )  #reference file (need to be indexed => script_index.sh) ! 
 
 pathtodata=$(echo "/sandbox/users/tleroy/AfricanRice/"$genus"_"$species"/") # the repertory containing all individus 
