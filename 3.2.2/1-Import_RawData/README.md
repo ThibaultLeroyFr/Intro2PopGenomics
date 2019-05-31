@@ -1,4 +1,5 @@
 Several bash scripts was made available to parallelize the download, but you can also download sequentially all files using a simple bash script with a loop such as:<br/><br/>
+<pre>
 cd ./AfricanRice/Oryza_barthii<br/>
 for i in ERR2008855 ERR2008856 ERR2008857 ... ; do #all SRA/EBI accession ID to download<br/>
   mkdir $i # create a directory for each run<br/>
@@ -11,3 +12,4 @@ for i in ERR2008855 ERR2008856 ERR2008857 ... ; do #all SRA/EBI accession ID to 
   wget $path2<br/>
   cd ..<br/>
 done<br/>
+</pre>
