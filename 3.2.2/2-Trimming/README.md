@@ -1,4 +1,4 @@
-For <em>O. glaberrima</em> several scripts were made available to parallize the work but it is also possible to use a single loop to trim all the data (as in ./script_lanceur_trimming_Obarthii.sh).
+For <em>O. glaberrima</em> several scripts were made available to parallelize the jobs but it is also possible to use a single loop to trim all the data (as in ./script_lanceur_trimming_Obarthii.sh).
 <pre>
 module load java
 for j in ERR2008849 ERR2008850 ERR2008851 ERR2008852 ...; do  # list all individuals
