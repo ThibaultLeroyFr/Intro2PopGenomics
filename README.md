@@ -176,7 +176,7 @@ See also the R script ./3.3.1/PIFs_simulation/script_R_comp_power_poolseq_indivi
 <pre><code>
 <strong>1/ Downloading sequencing reads, trimming & reference genome indexing (see section 3.2.2 above)</strong>
 Softwares needed: <a href="https://www.gnu.org/software/wget/">wget</a> (ftp-transfert) & <a href="https://github.com/timflutre/trimmomatic">Trimmomatic</a> (read trimming)
-See <a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">here</a> for a list of all sequencing data available (1 run accession = 1 lane, 4 lanes/pool). A correspondence table between SRA accession numbers and Population IDs as indicated in Leroy et al. 2019 is available (./3.3.3/IDs_correspondence_table.txt/)
+See <a href="https://www.ebi.ac.uk/ena/data/view/PRJEB21312">here</a> for a list of all sequencing data available (1 run accession = 1 lane, 4 lanes/pool). A correspondence table between SRA accession IDs and Population IDs as indicated in Leroy et al. 2019 is available (./3.3.3/IDs_correspondence_table.txt/)
 The oak reference genome (PM1N) can be downloaded from <a href="http://www.oakgenome.fr/?page_id=587">oakgenome</a>.
 
 <strong>2/ Mapping, sorting & removing duplicates (see ./3.3.3/4-Mapping/mapping_O16.sh)</strong>
