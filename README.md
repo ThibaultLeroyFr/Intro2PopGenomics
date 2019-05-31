@@ -229,11 +229,11 @@ From the popoolation2 synchronized mpileup format, the popsync2pooldata & poolda
 Software needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/">BayPass</a>
 <em>i_baypass -npop [nb_pops] -gfile [INFILE] -poolsizefile [FILE_with_popsizes] [+ parameters related to Markov chains, read the BayPass's manual <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]</em>
 
-<strong>Identify outlier loci (./3.3.7/script_baypass_XtX_BFplots.R)</strong>
+<strong>Identify outlier loci (./3.3.6/Rscript_XtX/script_baypass_XtX_plots.R</strong>
 R scripts needed: <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>
-<em>See ./3.3.7/script_baypass_XtX_plots.R</em>
-Generate thresholds based on the pseudo-observed datasets (PODS) and Manhattan plots of XtX values highlighting outliers 
-For information regarding how to perform simulations to generate the PODS for calibration, see <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]</em>
+<em>See ./3.3.6/Rscript_XtX/script_baypass_XtX_plots.R</em>
+Generate pseudo-observed datasets (PODS) and Manhattan plots of XtX values highlighting outliers 
+For more information on how to perform neutral simulations to calibrate the XtX, see also <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]</em>
 
 </pre></code>
 *3.3.7 - Genotype-Environment associations* <br/>
