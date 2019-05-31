@@ -1,4 +1,5 @@
-Several bash scripts was made available to parallelize the download, but you can also download sequentially all files using a simple bash script with a loop such as:<br/><br/>
+Our objective was to be as simple as possible at the very beginning of this manual. As a consequence, we do not use loops. <br/>
+It is however possible to download sequentially all files using a simple bash script with a loop such as:<br/>
 <pre>
 cd ./AfricanRice/Oryza_barthii
 for i in ERR2008855 ERR2008856 ERR2008857 ... ; do #all SRA/EBI accession ID to download
