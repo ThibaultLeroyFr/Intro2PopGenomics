@@ -231,7 +231,8 @@ Software needed: <a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/
 
 <strong>Identify outlier loci (./3.3.7/script_baypass_XtX_BFplots.R)</strong>
 R scripts needed: <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>
-Generate thresholds based on the pseudo-observed datasets (PODS) and Manhattan plots of XtX values highlighting outliers (see ./3.3.7/script_baypass_XtX_BFplots.R)
+<em>See ./3.3.7/script_baypass_XtX_plots.R</em>
+Generate thresholds based on the pseudo-observed datasets (PODS) and Manhattan plots of XtX values highlighting outliers 
 For information regarding how to perform simulations to generate the PODS for calibration, see <a href="<a href="http://www1.montpellier.inra.fr/CBGP/software/baypass/files/BayPass_manual_2.1.pdf">here</a>">here</a>]</em>
 
 </pre></code>
@@ -245,5 +246,6 @@ It is important to use the "-scalecov" option to scale all covariables.</em>
 
 <strong>Identify Genotype-environment (GEA) or Genotype-Phenotype associations (GPA/pGWAS) (./3.3.7/script_baypass_XtX_BFplots.R)</strong>
 R scripts needed: <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>
-Generate plots of XtX vs. Bayes Factors (BF) and Manhattan plots of BF values highlighting SNPs with strong support for associations with environmental or phenotypic variables (see <em>./3.3.7/script_baypass_XtX_BFplots.R</em>)
+<em>See ./3.3.7/script_baypass_XtX_BFplots.R</em>
+This script generates plots of XtX vs. Bayes Factors (BF) and Manhattan plots of BF values highlighting SNPs with strong support for associations with environmental or phenotypic variables
 </pre></code>
