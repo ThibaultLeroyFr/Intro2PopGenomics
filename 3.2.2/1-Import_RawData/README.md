@@ -8,7 +8,7 @@ for i in ERR2008855 ERR2008856 ERR2008857 ... ; do #all SRA/EBI accession ID to 
   start=$(echo -n $i| head -c 6) # first 6 characters of the ID
   end=$(echo -n $i| tail -c 1) # last character of the ID
   path1=$(echo "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/""$start""/00""$end""/""$i""/""$i""_1.fastq.gz")
-  path2=$(echo "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/""$start""/00""$end""/""$i""/""$i""_1.fastq.gz")
+  path2=$(echo "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/""$start""/00""$end""/""$i""/""$i""_2.fastq.gz")
   wget $path1
   wget $path2
   cd ..
