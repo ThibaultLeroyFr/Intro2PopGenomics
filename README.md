@@ -1,7 +1,7 @@
 # Introduction to population genomics
 This github directory hosts all scripts used to perform the analyses shown in in the book chapter of Leroy & Rougemont (2019).
 
->*Leroy, T & Rougemont, Q. 2019. Population genetics analysis methods: from population structure inferences to genome scans for selection. In: Molecular Plant Taxonomy (Springer)*
+>*Leroy, T & Rougemont, Q. 2019. Introduction to population genetics analysis methods. In: Molecular Plant Taxonomy (Springer)*
 
 Please send an email to <a href="mailto:thibault.leroy@univie.ac.at;quentinrougemont@orange.fr?subject=[Intro2popGenomics-Github]">us </a> for questions regarding these scripts or for full-text requests.
 
